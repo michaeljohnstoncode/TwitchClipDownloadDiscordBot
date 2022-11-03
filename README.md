@@ -64,7 +64,7 @@ Go to a server/message where you can see your discord self, right click and copy
 
 ![image](https://user-images.githubusercontent.com/92060282/199518939-9d08192d-9ec2-4e2c-ab45-fdd5f3aea187.png)
 
-
+Enter all of these IDs and tokens into config.json
 
 # Goal/Purpose
 This program streamlines the process of getting a live twitch clip, and downloading that to file. The intention behind this program was to create content faster. It allows me to clip the streamer's reaction, and send it straight to a folder used by video editing software. And since videos are downloaded using [Youtube-DL](https://github.com/ytdl-org/youtube-dl), any [video](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md) supported by it may also be downloaded (youtube, twitter, reddit, etc).
