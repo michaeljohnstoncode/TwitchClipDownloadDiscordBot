@@ -1,0 +1,444 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ClipDownloadDiscordBot/1.0.0": {
+        "dependencies": {
+          "Discord.Addons.Interactive": "2.0.0",
+          "Discord.Net": "3.8.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.Http": "6.0.0",
+          "NYoutubeDLP": "0.13.0",
+          "TwitchAuthExample": "1.0.0.0"
+        },
+        "runtime": {
+          "ClipDownloadDiscordBot.dll": {}
+        }
+      },
+      "Discord.Addons.Interactive/2.0.0": {
+        "dependencies": {
+          "Discord.Net.Commands": "3.8.0",
+          "Discord.Net.WebSocket": "3.8.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Discord.Addons.Interactive.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "Discord.Net/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Commands": "3.8.0",
+          "Discord.Net.Core": "3.8.0",
+          "Discord.Net.Interactions": "3.8.0",
+          "Discord.Net.Rest": "3.8.0",
+          "Discord.Net.WebSocket": "3.8.0",
+          "Discord.Net.Webhook": "3.8.0"
+        }
+      },
+      "Discord.Net.Commands/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Core": "3.8.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.Commands.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Discord.Net.Core/3.8.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "System.Collections.Immutable": "5.0.0",
+          "System.Interactive.Async": "5.0.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.Core.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Discord.Net.Interactions/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Core": "3.8.0",
+          "Discord.Net.Rest": "3.8.0",
+          "Discord.Net.WebSocket": "3.8.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Collections.Immutable": "5.0.0",
+          "System.Reactive": "5.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.Interactions.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Discord.Net.Rest/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Core": "3.8.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.Rest.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Discord.Net.Webhook/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Core": "3.8.0",
+          "Discord.Net.Rest": "3.8.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.Webhook.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Discord.Net.WebSocket/3.8.0": {
+        "dependencies": {
+          "Discord.Net.Core": "3.8.0",
+          "Discord.Net.Rest": "3.8.0"
+        },
+        "runtime": {
+          "lib/net6.0/Discord.Net.WebSocket.dll": {
+            "assemblyVersion": "3.8.0.0",
+            "fileVersion": "3.8.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Http/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Http.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0",
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Options/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "NYoutubeDLP/0.13.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NYoutubeDLP.dll": {
+            "assemblyVersion": "0.13.0.0",
+            "fileVersion": "0.13.0.0"
+          }
+        }
+      },
+      "System.Collections.Immutable/5.0.0": {},
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Interactive.Async/5.0.0": {
+        "dependencies": {
+          "System.Linq.Async": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/System.Interactive.Async.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
+      "System.Linq.Async/5.0.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/System.Linq.Async.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
+      "System.Reactive/5.0.0": {
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.ValueTuple/4.5.0": {},
+      "TwitchAuthExample/1.0.0.0": {
+        "runtime": {
+          "TwitchAuthExample.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ClipDownloadDiscordBot/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Discord.Addons.Interactive/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j/bkGeDniPuODOOC+3ZpKvLmoG0z1NHSZrVu6bnaUEYd0tMY4TxaIwl36ue7fK9MXrqQc8VcjcDnvM6JX+V6HA==",
+      "path": "discord.addons.interactive/2.0.0",
+      "hashPath": "discord.addons.interactive.2.0.0.nupkg.sha512"
+    },
+    "Discord.Net/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sZD2xupS+9GD5n0hrg0i31bC8KszAt+S9COr3Z526vt0CE2TwIdohUjsOK6Pao7Hrl58Nf0BL9+j7iZZz+0VjQ==",
+      "path": "discord.net/3.8.0",
+      "hashPath": "discord.net.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.Commands/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NaeScuFoL8O7QfeDxWGiBRAd13Qajn2iWl6MS5HdCFFfKWjNrCmo7v6STap8uN7PyID/14dwFDzCNCudRArJRg==",
+      "path": "discord.net.commands/3.8.0",
+      "hashPath": "discord.net.commands.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.Core/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-anq5FvYE5Uls7zIbMJt6IT9yXndoJpPh/fMiNhFDMqgzQlZtCoOODGHcHtG50hDNn777kYTpWPQ8Q0UosqHjWQ==",
+      "path": "discord.net.core/3.8.0",
+      "hashPath": "discord.net.core.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.Interactions/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rbnSyD6GqNledBVzbjtkhIsnmoz8tKt2vTzEkNg4d4h8Q2Eh066Co5oVSO7jNH07ugT8kyZSdW87Q60YrrD7+w==",
+      "path": "discord.net.interactions/3.8.0",
+      "hashPath": "discord.net.interactions.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.Rest/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-D8CGSkWqeRg3D8ZawthWdwKFHPVhdYB8dxltT5wAgN5op6lZd8BjEzCCOlsDrnIGcah3BkOnVqgPk1u0SBxqWw==",
+      "path": "discord.net.rest/3.8.0",
+      "hashPath": "discord.net.rest.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.Webhook/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5TZavUm1OqZKWr98JH1J9dZNixu32Kylz+9iL2czvR+IfdfpG6UXr40qk79Po6WLjWHmtBEpULVwSN11otTG3g==",
+      "path": "discord.net.webhook/3.8.0",
+      "hashPath": "discord.net.webhook.3.8.0.nupkg.sha512"
+    },
+    "Discord.Net.WebSocket/3.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DOPGQLqyf2km0UyOcLxeV6TP4WA2f18aWJAaU4TxInYMqAVSOZVaQfB0bBf307uNNlYqCE6loYwrysH8zQNbpQ==",
+      "path": "discord.net.websocket/3.8.0",
+      "hashPath": "discord.net.websocket.3.8.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Http/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-15+pa2G0bAMHbHewaQIdr/y6ag2H3yh4rd9hTXavtWDzQBkvpe2RMqFg8BxDpcQWssmjmBApGPcw93QRz6YcMg==",
+      "path": "microsoft.extensions.http/6.0.0",
+      "hashPath": "microsoft.extensions.http.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
+      "path": "microsoft.extensions.logging/6.0.0",
+      "hashPath": "microsoft.extensions.logging.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
+      "path": "microsoft.extensions.logging.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Options/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
+      "path": "microsoft.extensions.options/6.0.0",
+      "hashPath": "microsoft.extensions.options.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
+      "path": "microsoft.extensions.primitives/6.0.0",
+      "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "NYoutubeDLP/0.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qJXtGzna78rvVhFxuEgSI83LwN2G2rxig1t1fJ2mY6kChfLerPX+w65qMXhTBvmsxcLhbWT+QLCi3FeWxLFDaA==",
+      "path": "nyoutubedlp/0.13.0",
+      "hashPath": "nyoutubedlp.0.13.0.nupkg.sha512"
+    },
+    "System.Collections.Immutable/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FXkLXiK0sVVewcso0imKQoOxjoPAj42R8HtjjbSjVPAzwDfzoyoznWxgA3c38LDbN9SJux1xXoXYAhz98j7r2g==",
+      "path": "system.collections.immutable/5.0.0",
+      "hashPath": "system.collections.immutable.5.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
+      "path": "system.diagnostics.diagnosticsource/6.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
+    },
+    "System.Interactive.Async/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QaqhQVDiULcu4vm6o89+iP329HcK44cETHOYgy/jfEjtzeFy0ZxmuM7nel9ocjnKxEM4yh1mli7hgh8Q9o+/Iw==",
+      "path": "system.interactive.async/5.0.0",
+      "hashPath": "system.interactive.async.5.0.0.nupkg.sha512"
+    },
+    "System.Linq.Async/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cPtIuuH8TIjVHSi2ewwReWGW1PfChPE0LxPIDlfwVcLuTM9GANFTXiMB7k3aC4sk3f0cQU25LNKzx+jZMxijqw==",
+      "path": "system.linq.async/5.0.0",
+      "hashPath": "system.linq.async.5.0.0.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "TwitchAuthExample/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
