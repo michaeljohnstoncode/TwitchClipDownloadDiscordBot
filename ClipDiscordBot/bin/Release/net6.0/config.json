@@ -1,0 +1,9 @@
+{
+  "twitch_client_id": "",
+  "twitch_client_secret": "",
+  "discord_bot_token": "",
+  "discord_user_id": "",
+  "twitch_auth_token": "",
+  "twitch_auth_code": "",
+  "twitch_refresh_token": ""
+}
