@@ -33,14 +33,7 @@ namespace ClipDownloadDiscordBot
             await _commandHandler.InstallCommandsAsync();
 
             //set up discord bot token
-            _configJson = new DeserializeConfigJson(configFileName);
-            ConfigJson configJson = await _configJson.GetConfigJson();
-            string token = configJson.DiscordBotToken;
-            if (string.IsNullOrEmpty(token))
-            {
-                Console.WriteLine("******You must input a discord token in config.json to start the bot!******");
-                Console.ReadLine();
-            }
+            var token = await GetToken(configFileName);
 
             //bot start
             await _client.LoginAsync(TokenType.Bot, token);
@@ -48,6 +41,35 @@ namespace ClipDownloadDiscordBot
 
             //this allows the bot to continue running
             await Task.Delay(-1);
+        }
+
+        private async Task<string> GetToken(string configFileName)
+        {
+            //attempt safe deserialization
+            try
+            {
+                _configJson = new DeserializeConfigJson(configFileName);
+                ConfigJson configJson = await _configJson.GetConfigJson();
+                string token = configJson.DiscordBotToken;
+                if (string.IsNullOrEmpty(token))
+                {
+                    Console.WriteLine("******You must input a discord token in config.json to start the bot!******");
+                    throw new ArgumentNullException("Missing bot token in config file.");
+                }
+                return token;
+            }
+            catch (JsonSerializationException jEx)
+            {
+                Console.WriteLine("JSON format not recognized.");
+                var message = string.Format("Outer Exception: {0}{1}{2}", jEx.Message, Environment.NewLine, jEx.InnerException?.Message);
+                Console.WriteLine(message);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Unknown serialization exception.");
+                throw;
+            }
         }
 
         private static IServiceProvider ConfigureServices()
