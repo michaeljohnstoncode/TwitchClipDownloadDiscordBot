@@ -68,6 +68,3 @@ Enter all of these IDs and tokens into config.json
 
 # Goal/Purpose
 This program streamlines the process of getting a live twitch clip, and downloading that to file. The intention behind this program was to create content faster. It allows me to clip the streamer's reaction, and send it straight to a folder used by video editing software. And since videos are downloaded using [Youtube-DL](https://github.com/ytdl-org/youtube-dl), any [video](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md) supported by it may also be downloaded (youtube, twitter, reddit, etc).
-
-## License
-[BSD-3](https://opensource.org/licenses/BSD-3-Clause)
