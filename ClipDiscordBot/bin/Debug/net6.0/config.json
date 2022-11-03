@@ -1,9 +1,9 @@
 {
-  "twitch_client_id": "897ydv8whyfk75q7u05pfecpdau5ip",
-  "twitch_client_secret": "0km800ky8wdr6n1qkzhpsxia06zvny",
-  "discord_bot_token": "MTAwOTQ2ODU3NDQ4NzgxODQzMQ.GAg1Mb.FADggY57pwkhB9YM-45lV0VPhbW1W3c2sSiijk",
-  "discord_user_id": "186647746806022144",
-  "twitch_auth_token": "mx24yc99hf457a4atggqrayotsdgya",
-  "twitch_auth_code": "rri8my4uyg44l1y22a65j60b4qkzbm",
-  "twitch_refresh_token": "9j9og220xvw4yph5im4z3i7268zlxj8gvarerhcn4r4izk0u4e"
+  "twitch_client_id": "",
+  "twitch_client_secret": "",
+  "discord_bot_token": "",
+  "discord_user_id": "",
+  "twitch_auth_token": "",
+  "twitch_auth_code": "",
+  "twitch_refresh_token": ""
 }
