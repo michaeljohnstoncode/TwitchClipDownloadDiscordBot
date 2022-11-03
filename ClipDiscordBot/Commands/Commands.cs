@@ -1,4 +1,4 @@
-﻿using ClipDiscordBot.Services;
+using ClipDiscordBot.Services;
 using Discord;
 using Discord.Commands;
 
@@ -25,7 +25,7 @@ namespace ClipDiscordBot.Module
             _configJson = configJson;
         }
 
-        [Command("help")]
+        [Command("cliphelp")]
         [Summary("Returns a list of all commands and their descriptions")]
         public async Task HelpCommandsAsync()
         {
