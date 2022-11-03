@@ -48,6 +48,12 @@ Generate a new Discord Bot Token.
 Then, match these settings to your bot.
 ![image](https://user-images.githubusercontent.com/92060282/199516559-18b01f35-66b5-4db1-b132-028500bc2bad.png)
 
+Go to the OAuth2 tab and select URL Generator. Click scopes -> bot, and bot permissions -> administrator
+
+![image](https://user-images.githubusercontent.com/92060282/199760752-d02aa160-6512-4bf4-ab27-e63c121e8a0a.png)
+
+Go to the link that is generated and invite your bot to your server!
+
 3. Discord User ID
 
 Lastly, go to your discord application https://discord.com/app
@@ -57,6 +63,7 @@ If developer mode is not already enabled, go to settings > advanced > developer 
 Go to a server/message where you can see your discord self, right click and copy ID
 
 ![image](https://user-images.githubusercontent.com/92060282/199518939-9d08192d-9ec2-4e2c-ab45-fdd5f3aea187.png)
+
 
 
 # Goal/Purpose
