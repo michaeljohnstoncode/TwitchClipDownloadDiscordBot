@@ -1,12 +1,19 @@
-# TwitchClipDownloadDiscordBot
+## TwitchClipDownloadDiscordBot
 Create twitch clips and download them through your own discord bot
 
+# Usage
+
+1. First, compile the program in your desired configuration.
+2. Next, navigate to the `${SolutionDir}/${ProjectDir}/bin/${SelectedConfiguration}/` output folder.
+3. Open config.json and complete the 4 strings. See installation below
+4. Run the executable ClipDownloadDiscordBot.exe
+5. Call commands in discord
+
+Arguments
+
+![image](https://user-images.githubusercontent.com/92060282/199502320-81bd97aa-7470-48cf-bd76-597c90037664.png)
+
 # Installation
-
-
-
-
-
 
 These 4 strings are required:
 Twitch Client ID, 
@@ -41,6 +48,12 @@ Generate a new Discord Bot Token.
 Then, match these settings to your bot.
 ![image](https://user-images.githubusercontent.com/92060282/199516559-18b01f35-66b5-4db1-b132-028500bc2bad.png)
 
+Go to the OAuth2 tab and select URL Generator. Click scopes -> bot, and bot permissions -> administrator
+
+![image](https://user-images.githubusercontent.com/92060282/199760752-d02aa160-6512-4bf4-ab27-e63c121e8a0a.png)
+
+Go to the link that is generated and invite your bot to your server!
+
 3. Discord User ID
 
 Lastly, go to your discord application https://discord.com/app
@@ -51,11 +64,7 @@ Go to a server/message where you can see your discord self, right click and copy
 
 ![image](https://user-images.githubusercontent.com/92060282/199518939-9d08192d-9ec2-4e2c-ab45-fdd5f3aea187.png)
 
-
-
-Arguments
-
-![image](https://user-images.githubusercontent.com/92060282/199502320-81bd97aa-7470-48cf-bd76-597c90037664.png)
+Enter all of these IDs and tokens into config.json
 
 # Goal/Purpose
 This program streamlines the process of getting a live twitch clip, and downloading that to file. The intention behind this program was to create content faster. It allows me to clip the streamer's reaction, and send it straight to a folder used by video editing software. And since videos are downloaded using [Youtube-DL](https://github.com/ytdl-org/youtube-dl), any [video](https://github.com/ytdl-org/youtube-dl/blob/master/docs/supportedsites.md) supported by it may also be downloaded (youtube, twitter, reddit, etc).
