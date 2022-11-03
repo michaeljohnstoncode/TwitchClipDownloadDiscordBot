@@ -23,24 +23,29 @@ namespace ClipDownloadDiscordBot
         public async Task MainAsync(string configFileName)
         {
             _client = new DiscordSocketClient();
-
             _client.Log += Log;
-
-            //set up services and commands
-            _services = ConfigureServices();
-            _commands = new CommandService();
-            _commandHandler = new CommandHandler(_client, _commands, _services);
-            await _commandHandler.InstallCommandsAsync();
-
-            //set up discord bot token
+            await SetupServices();
             var token = await GetToken(configFileName);
 
             //bot start
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
+            await KeepAlive();
+        }
 
-            //this allows the bot to continue running
-            await Task.Delay(-1);
+        /// <summary>
+        /// This allows the bot to continue running.
+        /// </summary>
+        /// <returns></returns>
+        private static async Task KeepAlive() => await Task.Delay(-1);
+
+        private async Task SetupServices()
+        {
+            //set up services and commands
+            _services = ConfigureServices();
+            _commands = new CommandService();
+            _commandHandler = new CommandHandler(_client, _commands, _services);
+            await _commandHandler.InstallCommandsAsync();
         }
 
         private async Task<string> GetToken(string configFileName)
@@ -96,6 +101,7 @@ namespace ClipDownloadDiscordBot
             return services.BuildServiceProvider();
         }
 
+        // Consider replacing with Serilog
         private Task Log(LogMessage msg)
         {
             Console.WriteLine(msg.ToString());
