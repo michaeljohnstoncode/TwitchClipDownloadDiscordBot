@@ -1,7 +1,6 @@
 ﻿using ClipDiscordBot;
 using ClipDiscordBot.Models;
 using ClipDiscordBot.Services;
-using ClipDownloadDiscordBot.Services;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -64,8 +63,7 @@ public class Program
             .AddSingleton<ClipInfo>()
             .AddSingleton<DeserializeConfigJson>()
             .AddSingleton<NoStreamerFound>()
-            .AddSingleton<AuthTokenValidity>()
-            .AddSingleton<UpdateYTDLP>();
+            .AddSingleton<AuthTokenValidity>();
 
         services.AddHttpClient<BroadcasterID>();
         services.AddHttpClient<Clip>();

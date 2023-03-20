@@ -11,7 +11,6 @@ namespace ClipDiscordBot
         private readonly HttpClient _httpClient;
         private DeserializeConfigJson _configJson;
         private Discord.Commands.SocketCommandContext _discordContext;
-        private bool isAuthCodeInvalid;
         public AuthTokenValidity(HttpClient httpClient, DeserializeConfigJson configJson)
         {
             _httpClient = httpClient;
@@ -39,12 +38,6 @@ namespace ClipDiscordBot
 
             if (string.IsNullOrEmpty(twitchAuthCode))
                 await NewAuthCode(_discordContext);
-
-            if(isAuthCodeInvalid == true)
-            {
-                await NewAuthCode(_discordContext);
-                isAuthCodeInvalid = false;
-            }
 
             if (string.IsNullOrEmpty(twitchAuthToken))
                 await NewAuthToken();
@@ -94,13 +87,6 @@ namespace ClipDiscordBot
 
                 response = await _httpClient.SendAsync(request);
                 authTokenJson = await response.Content.ReadAsStringAsync();
-            }
-
-            //in the case twitch auth code fails (unknown why), try to get a new auth code
-            if (authTokenJson.Contains("Invalid authorization code"))
-            {
-                ValidateTokens();
-                isAuthCodeInvalid = true;
             }
 
             var authTokenInfo = JsonConvert.DeserializeObject<TwitchAuthToken>(authTokenJson);

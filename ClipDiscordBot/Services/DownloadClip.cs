@@ -1,6 +1,4 @@
-﻿
-using ClipDownloadDiscordBot.Services;
-using NYoutubeDL;
+﻿using NYoutubeDL;
 using NYoutubeDL.Options;
 
 namespace ClipDiscordBot.Services
@@ -10,13 +8,11 @@ namespace ClipDiscordBot.Services
         private YoutubeDLP _youtubeDl;
         private ClipInfo _clipInfo;
         private string lastClipUrl;
-        private UpdateYTDLP _updateYoutubeDLP;
 
-        public DownloadClip(YoutubeDLP youtubeDl, ClipInfo clipInfo, UpdateYTDLP updateYoutubeDLP)
+        public DownloadClip(YoutubeDLP youtubeDl, ClipInfo clipInfo)
         {
             _youtubeDl = youtubeDl;
             _clipInfo = clipInfo;
-            _updateYoutubeDLP = updateYoutubeDLP;
         }
 
         public void SetPreviousClip(string clipUrl) => lastClipUrl = clipUrl;
@@ -82,17 +78,8 @@ namespace ClipDiscordBot.Services
                 _youtubeDl.StandardErrorEvent += (sender, errorOutput) => Console.WriteLine(errorOutput);
                 Console.WriteLine("Starting download...");
                 await context.Channel.ModifyMessageAsync(msgId, x => x.Content = "Your clip is currently being downloaded");
-                
+
                 await _youtubeDl.DownloadAsync(clipUrl);
-                
-                //if any errors occur in the download, then try updating yt-dlp program to the latest version (in hopes it will fix)
-                List<string> errors = _youtubeDl.Info.Errors;
-                if (errors.Count > 0)
-                {
-                    _updateYoutubeDLP.UpdateYoutubeDLP();
-                    await _youtubeDl.DownloadAsync(clipUrl);
-                }
-                
                 _youtubeDl.Options.FilesystemOptions.Output = filePath;
             }
             //task canceled exception for catching when canceling download (I don't know why this happens). creates new downloader instance
@@ -109,7 +96,7 @@ namespace ClipDiscordBot.Services
             //check if download is complete
             // this isn't actually working the way its intended, and I could not figure out why. it was working before...
             // this will always send a download completion, unless download is canceled above
-            if (File.Exists(fullFilePath))
+            if (!File.Exists(fullFilePath))
             {
                 await context.Channel.ModifyMessageAsync(msgId, x => x.Content = "Download has been completed :white_check_mark:");
             }

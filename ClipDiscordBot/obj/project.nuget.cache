@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Frh9WihmTUaLCGeGYBX5GYLXC2iXvHG1Fnlaogt2z+HMLJV7ZtWXkXDowFCRlAPxsPsXRQ6+qvM21/bqi3f0mQ==",
+  "dgSpecHash": "7eH10gvHjWnmDMveiPXqlILJIuspAgpV1mlXIhAUobUrI2RhLD7W8cpcYq6WA4RU+0sVqdIC2/tOASopeDgmGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Michael\\source\\repos\\LastDiscordBotTest\\TwitchClipDownloadDiscordBot\\ClipDiscordBot\\ClipDownloadDiscordBot.csproj",
+  "projectFilePath": "C:\\Users\\Michael\\source\\repos\\ClipDiscordBot\\ClipDiscordBot\\ClipDownloadDiscordBot.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Michael\\.nuget\\packages\\discord.addons.interactive\\2.0.0\\discord.addons.interactive.2.0.0.nupkg.sha512",
     "C:\\Users\\Michael\\.nuget\\packages\\discord.net\\3.8.0\\discord.net.3.8.0.nupkg.sha512",
