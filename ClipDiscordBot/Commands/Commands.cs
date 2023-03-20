@@ -1,6 +1,7 @@
 using ClipDiscordBot.Services;
 using Discord;
 using Discord.Commands;
+using System.Diagnostics;
 
 namespace ClipDiscordBot.Module
 {
@@ -60,7 +61,7 @@ namespace ClipDiscordBot.Module
         public async Task SendClipAsync(string streamerName)
         {
             //only accept commands from ONE specific user, that who is hosting this bot
-            var configJson = await _configJson.GetConfigJson();
+            var configJson = await _configJson.GetConfigJson(); //get config info for twitch auth, discord auth
             string discordUserId = configJson.DiscordUserId;
             ulong id = Convert.ToUInt64(discordUserId);
             if (Context.User.Id != id)
@@ -187,7 +188,7 @@ namespace ClipDiscordBot.Module
 
         [Command("canceldl")]
         [Summary("Cancels the current download")]
-        public async Task CancelDownloadAsync()
+        public async Task CancelDownloadAsync() 
         {
             //only accept commands from ONE specific user, that who is hosting this bot
             var configJson = await _configJson.GetConfigJson();
@@ -213,7 +214,6 @@ namespace ClipDiscordBot.Module
             var context = Context;
             _authTokenValidity.DiscordContext(context);
             await _authTokenValidity.ValidateTokens();
-
         }
     }
 }
