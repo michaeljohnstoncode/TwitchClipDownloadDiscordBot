@@ -7,7 +7,7 @@ Create twitch clips and download them through your own discord bot
 2. Next, navigate to the `${SolutionDir}/${ProjectDir}/bin/${SelectedConfiguration}/` output folder.
 3. Open config.json and complete the 4 strings. See installation below
 4. Run the executable ClipDownloadDiscordBot.exe
-5. Call commands in discord
+5. Call commands in discord. /cliphelp will list arguments in discord
 
 Arguments
 
