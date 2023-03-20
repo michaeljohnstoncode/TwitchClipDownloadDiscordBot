@@ -1,7 +1,6 @@
 ﻿using ClipDiscordBot;
 using ClipDiscordBot.Models;
 using ClipDiscordBot.Services;
-using ClipDownloadDiscordBot;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
@@ -12,29 +11,71 @@ using System.Net.Http;
 using TwitchAuthExample;
 public class Program
 {
-    private static string _configFileName = "config.json";
+    private DiscordSocketClient _client;
+    private CommandService _commands;
+    private CommandHandler _commandHandler;
+    private IServiceProvider _services;
+    private DeserializeConfigJson _configJson;
 
-    // Avoid throwing out arguments
-    public static async Task Main(string[] args) => await CheckReadyToRun(args);
+    public static Task Main(string[] args) => new Program().MainAsync();
 
-    // Check if there are arguments and if there is a config file
-    private static async Task CheckReadyToRun(string[] args)
+    public async Task MainAsync()
     {
-        // You should check for a filepath as argument and accept it as the json file here
-        if (args.Length != 0)
+        _client = new DiscordSocketClient();
+
+        _client.Log += Log;
+
+        //set up services and commands
+        _services = ConfigureServices();
+        _commands = new CommandService();
+        _commandHandler = new CommandHandler(_client, _commands, _services);
+        await _commandHandler.InstallCommandsAsync();
+
+        //set up discord bot token
+        _configJson = new DeserializeConfigJson();
+        ConfigJson configJson = await _configJson.GetConfigJson();
+        string token = configJson.DiscordBotToken;
+        if (string.IsNullOrEmpty(token))
         {
-            Console.WriteLine("This program does not accept any arguments.");
-            return;
+            Console.WriteLine("******You must input a discord token in config.json to start the bot!******");
+            Console.ReadLine();
         }
-        if (!ConfigExists())
-        {
-            Console.WriteLine("Missing config.json file please see the readme.md for more information.");
-            return;
-        }
-        var discord = new SetupDiscord();
-        await discord.MainAsync(_configFileName);
+
+        //bot start
+        await _client.LoginAsync(TokenType.Bot, token);
+        await _client.StartAsync();
+
+        //this allows the bot to continue running
+        await Task.Delay(-1);
     }
 
-    private static bool ConfigExists() => File.Exists(_configFileName);
+    private static IServiceProvider ConfigureServices()
+    {
+        var services = new ServiceCollection()
+            .AddSingleton<BroadcasterID>()
+            .AddSingleton<Clip>()
+            .AddSingleton<SearchChannels>()
+            .AddSingleton<StreamerVod>()
+            .AddSingleton<CommandHandler>()
+            .AddSingleton<DownloadClip>()
+            .AddSingleton<YoutubeDLP>()
+            .AddSingleton<DiscordSocketClient>()
+            .AddSingleton<ClipInfo>()
+            .AddSingleton<DeserializeConfigJson>()
+            .AddSingleton<NoStreamerFound>()
+            .AddSingleton<AuthTokenValidity>();
 
+        services.AddHttpClient<BroadcasterID>();
+        services.AddHttpClient<Clip>();
+        services.AddHttpClient<SearchChannels>();
+        services.AddHttpClient<StreamerVod>();
+
+        return services.BuildServiceProvider();
+    }
+
+    private Task Log(LogMessage msg)
+	{
+		Console.WriteLine(msg.ToString());
+		return Task.CompletedTask;
+	}
 }
